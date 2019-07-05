@@ -1,7 +1,7 @@
 module.exports = {    
     name : 'arduino-uno',
     platform : 'arduino-avr',
-    title : 'Arduino Uno',
+    title : 'Arduino Uno R3',
     description : 'Arduino Uno - Beginer board for learning Arduino',
     author : 'Maker Asia',
     website : 'http://www.arduino.cc',

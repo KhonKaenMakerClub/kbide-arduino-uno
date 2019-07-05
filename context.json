@@ -1,6 +1,6 @@
 {	
     "arch" : "atmega328p",
-    "baudrate" : 57600,
+    "baudrate" : 115200,
     "cpu_clock" : 16000000,
     "arduino_version" : 18,
     
