@@ -101,8 +101,8 @@ function compile(rawCode, boardName, config, cb) {
     platformCompiler.compileFiles(inc_src, [], cflags, inc_switch)
     .then(() => {
       //return platformCompiler.archiveProgram(inc_src);
-      return engine.util.promiseTimeout(1000);
-    }).then(() => {
+      //return engine.util.promiseTimeout(1000);
+    //}).then(() => {
       return platformCompiler.linkObject(ldflags, libflags);
     }).then(() => {
       return platformCompiler.createBin();
