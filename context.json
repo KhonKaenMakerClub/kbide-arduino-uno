@@ -1,5 +1,6 @@
 {	
-    "arch" : "atmega328p",
+    "mcu" : "atmega328p",
+    "arch" : "AVR_UNO",
     "baudrate" : 115200,
     "cpu_clock" : 16000000,
     "arduino_version" : 18,

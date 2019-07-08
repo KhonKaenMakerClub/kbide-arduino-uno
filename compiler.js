@@ -98,10 +98,10 @@ function compile(rawCode, boardName, config, cb) {
     inc_src.push(`${app_dir}/user_app.cpp`);
     platformCompiler.setConfig(contextBoard);
 
-    engine.util.promiseTimeout(1000).then(() => {
-      return platformCompiler.compileFiles(inc_src, [], cflags, inc_switch);
-    }).then(() => {
-      return platformCompiler.archiveProgram(inc_src);
+    platformCompiler.compileFiles(inc_src, [], cflags, inc_switch)
+    .then(() => {
+      //return platformCompiler.archiveProgram(inc_src);
+      return engine.util.promiseTimeout(1000);
     }).then(() => {
       return platformCompiler.linkObject(ldflags, libflags);
     }).then(() => {
