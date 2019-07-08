@@ -44,24 +44,10 @@ module.exports = {
                         </value>
                     </block>`
                 },                
-                {
-                    xml : 
-                    `<block type="io_analog_read">
-                        <value name="pin">
-                            <shadow type="math_number">
-                                <field name="NUM">A0</field>
-                            </shadow>
-                        </value>
-                    </block>`
-                },
+                "io_analog_read",
                 {
                     xml : 
                     `<block type="io_pwm_write">
-                        <value name="pin">
-                            <shadow type="math_number">
-                                <field name="NUM">3</field>
-                            </shadow>
-                        </value>
                         <value name="value">
                             <shadow type="math_number">
                                 <field name="NUM">128</field>
