@@ -49,14 +49,13 @@ function compile(rawCode, boardName, config, cb) {
       while (m = incsRex.exec(sourceCode)) {
         let incFile = m[1].trim();
         //lookup plugin
-        let includedPlugin = pluginInfo.categories.filter(
-          obj => obj.sourceFile.includes(incFile));
-        if (includedPlugin.length > 0) {
-          codeContext.plugins_includes_switch.push(
-            includedPlugin[0].directory + "/src");
-          let targetCppFile = includedPlugin[0].directory + "/src/" +
-            incFile.replace(".h", ".cpp");
-          codeContext.plugins_sources.push(targetCppFile);
+        let includedPlugin = pluginInfo.categories.find(obj=> obj.sourceFile.includes(incFile));
+        if(includedPlugin){
+          codeContext.plugins_includes_switch.push(includedPlugin.sourceIncludeDir);
+          let targetCppFile = includedPlugin.sourceIncludeDir + "/" + incFile.replace(".h",".cpp");
+          if(fs.existsSync(targetCppFile)){
+            codeContext.plugins_sources.push(targetCppFile);
+          }
         }
       }
     } else {
