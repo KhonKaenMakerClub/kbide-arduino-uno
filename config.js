@@ -8,5 +8,5 @@ module.exports = {
   email: "makerasia@gmail.com",
   git: "https://github.com/KhonKaenMakerClub/kbide-arduino-uno/",
   image: "/static/display.jpg",
-  version: "1.0.1"
+  version: "1.1.0"
 };
